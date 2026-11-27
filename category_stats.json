@@ -1,0 +1,29 @@
+{
+  "generated_at": "2026-11-27T08:33:09.084733",
+  "total_articles": 595,
+  "by_category": {
+    "General": 402,
+    "AI & Tech": 107,
+    "Business & Policy": 17,
+    "EV & Auto": 5,
+    "Gadgets": 24,
+    "Hardware & Chips": 40
+  },
+  "top_sources": {
+    "Eurogamer": 100,
+    "Nature": 75,
+    "Sciencedaily": 60,
+    "Space": 50,
+    "Tomshardware": 50,
+    "Dexerto": 50,
+    "Digitaltrends": 30,
+    "Gamespot": 30,
+    "Zdnet": 25,
+    "Forbes": 25,
+    "Kotaku": 20,
+    "TechCrunch": 20,
+    "Fastcompany": 20,
+    "Polygon": 10,
+    "Nasa": 10
+  }
+}
