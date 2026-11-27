@@ -1,29 +1,29 @@
 {
-  "generated_at": "2026-11-27T15:09:45.354597",
-  "total_articles": 659,
+  "generated_at": "2026-11-27T21:07:36.490276",
+  "total_articles": 779,
   "by_category": {
-    "General": 443,
-    "AI & Tech": 115,
-    "Hardware & Chips": 48,
-    "Gadgets": 28,
-    "EV & Auto": 7,
-    "Business & Policy": 18
+    "General": 522,
+    "AI & Tech": 129,
+    "Hardware & Chips": 59,
+    "EV & Auto": 10,
+    "Gadgets": 39,
+    "Business & Policy": 20
   },
   "top_sources": {
-    "Eurogamer": 104,
-    "Nature": 81,
-    "Tomshardware": 65,
+    "Eurogamer": 112,
+    "Tomshardware": 89,
+    "Nature": 85,
+    "Dexerto": 68,
+    "Space": 61,
     "Sciencedaily": 60,
-    "Dexerto": 56,
-    "Space": 51,
-    "Digitaltrends": 42,
+    "Digitaltrends": 57,
+    "Forbes": 47,
+    "Fastcompany": 35,
     "Gamespot": 31,
-    "Forbes": 30,
-    "Fastcompany": 26,
+    "Kotaku": 26,
+    "Polygon": 25,
     "Zdnet": 25,
-    "Kotaku": 22,
     "TechCrunch": 20,
-    "Polygon": 15,
-    "The Verge": 11
+    "Entrepreneur": 13
   }
 }
