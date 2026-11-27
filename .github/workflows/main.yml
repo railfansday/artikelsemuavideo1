@@ -1,0 +1,65 @@
+name: Auto Scrape & Paraphrase News + 5s Video Preview
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: repo-update-lock
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Dependencies (FFmpeg & Playwright)
+        run: |
+          sudo apt-get update && sudo apt-get install -y ffmpeg
+          python -m pip install --upgrade pip
+          pip install feedparser requests beautifulsoup4 playwright
+          playwright install chromium
+
+      - name: Run News Scraper & 5s Video Preview
+        run: |
+          if [ -f "import_v4_video.py" ]; then
+            python import_v4_video.py
+          elif [ -f "import_v4.py" ]; then
+            python import_v4.py
+          else
+            python import.py
+          fi
+
+      - name: Commit & Push Updated Files
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+          # Cek status file yang berubah sebelum di-add
+          git status
+
+          # Paksa tambahkan seluruh file, folder artikel, dan folder videos
+          git add -A
+
+          git status
+
+          if ! git diff --staged --quiet; then
+            git commit -m "Auto update news, HTML, sitemap, RSS & 5s video preview"
+            git pull --rebase -X ours --autostash origin main || true
+            git push origin main
+          else
+            echo "Tidak ada file baru atau perubahan untuk di-push."
+          fi
