@@ -22,7 +22,7 @@ ARTIKEL_DIR = "artikel"
 ITEMS_PER_PAGE = 200
 VIDEO_DIR = "videos"
 ENABLE_SOURCE_VIDEO_PREVIEW = True
-VIDEO_MAX_PER_BUILD = 200        # Maksimal video direkam per build agar aman dari timeout
+VIDEO_MAX_PER_BUILD = 500        # Maksimal video direkam per build agar aman dari timeout
 VIDEO_DURATION_SEC = 5          # Durasi rekaman layar per artikel (detik)
 
 
